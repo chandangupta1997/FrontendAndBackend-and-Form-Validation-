@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checker</title>
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+
+            let val = document.forms["myForm"]["value"].value;
+
+            let val1 = parseInt(val)+2
+            let val2 =val1+2
+            let val3 =val2+2
+
+
+            let toShow = []
+            
+
+            toShow.push(val1)
+            toShow.push(val2)
+            toShow.push(val3)
+
+           
+            if(val<0){
+
+                alert("enter a postive value ");
+                return false; 
+
+            }
+            if(val%2==0){
+                alert(` next three numbers are ${toShow}`)
+
+                
+
+            }
+
+            else{
+                if(val==0){
+
+
+                }
+
+                else{
+                    
+                }
+            }
+        }
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+    <form name="myForm" action="http://localhost:3000/formData" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="fname"> <br>
+       
+
+
+        Value: <input type="text" name ="value">  <br>
+
+
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>
